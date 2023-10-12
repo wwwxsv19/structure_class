@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(){
-	long long int a[100001]={};
+	long long int a[100001]={0};
 	int n, m;
 	
 	scanf("%d", &n);

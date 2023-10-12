@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main() {
-	int n, num, score[81]={};
-	char arr[81]={}; // OX 문자 입력 받을 배열
+	int n, num, score[81]={0};
+	char arr[81]={0}; // OX 문자 입력 받을 배열
 	
 	scanf("%d", &n); // 입력 받을 횟수 입력
 
