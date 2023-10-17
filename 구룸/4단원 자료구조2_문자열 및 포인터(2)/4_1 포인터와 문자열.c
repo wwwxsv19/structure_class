@@ -1,4 +1,4 @@
-//1
+// 1
 /*
 #include <stdio.h>
 // typedef unsigned int size_t; // unsigned int 가 너무 기니까 size_t 로 줄여버리기
@@ -20,7 +20,7 @@ unsigned int myStrlen(const char* str){
 }
 */
 
-//2
+// 2
 /*
 #include <stdio.h>
 int main(){
@@ -34,7 +34,7 @@ int main(){
 }
 */
 
-//3
+// 3
 /*
 #include <stdio.h>
 void outputArray(int* p, int n){
