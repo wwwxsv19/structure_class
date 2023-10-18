@@ -23,7 +23,7 @@ void init_table(element hs[]){
 int trans(char* key){
 	int num = 0;
 	while(*key){
-		num = 3 * num + *key++;
+		num = 3 * num + *key++; // 이 식이 어떻게 변하는가에 따라 들어가는 위치가 다 달라진다... 주의!!
 	}
 	return num;
 }
@@ -78,6 +78,8 @@ void hashPrint(element hs[]){
 int main(void){
 	char *s[7] = {"do", "for", "if", "case", "else", "return", "function"};
 	element e;
+
+	init_table(hash_table);
 	
 	for(int i=0; i<7; i++){
 		strcpy(e.key, s[i]);
