@@ -25,20 +25,18 @@ int isEmpty(Stack *s){   // 스택이 비어 있으면 true 리턴
 void psh(Stack *s, int data){ //스택이 가득 차 있으면 문구 출력 후 리턴, 아니면 push
 	if(isFull(s)){
 		printf("stack is full\n");
-		return;
+		return ;
 	}
-	s->top++;
-	s->data[s->top] = data;
+	s->data[++s->top] = data;
 }
 
-void pop( Stack *s ){  //스택이 비어 있으면 문구 출력 후 0 리턴, 아니면 맨 위 데이터 리턴
+void pop(Stack *s){  //스택이 비어 있으면 문구 출력 후 0 리턴, 아니면 맨 위 데이터 리턴
 	if(isEmpty(s)){
 		printf("stack is empty\n");
 		return ;
 	}
 	else{
-		printf("pop 데이터 : %d\n", s->data[s->top]);
-		s->top--;
+		printf("pop 데이터 : %d\n", s->data[s->top--]);
 	}
 }
 
@@ -46,6 +44,7 @@ int main(){
 	int menu;
 	element data;
 	Stack s;
+
 	initStack( &s );
 	
 	do{
@@ -53,25 +52,25 @@ int main(){
 		printf("1:push, 2:pop, 0:exit : ");
 		scanf("%d", &menu);
 		
-		switch( menu ){
-			case 1 :
+		switch(menu){
+			case 1:
 				printf("데이터 입력 : ");
 				scanf("%d", &data);
 				psh(&s, data);
 				break;
 				
-			case 2 :
+			case 2:
 				pop(&s);
 				break;
 				
-			case 0 :
+			case 0:
 				break;
 			
-			default :
+			default:
 				printf("잘못된 입력 입니다. \n");
 				break;
 		}
-	}while( menu );
+	}while(menu);
 	
 	return 0;
 }
