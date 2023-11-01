@@ -1,22 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+
+typedef int element;
 
 typedef struct Node{
-    char data[100];
+    element data;
     struct Node* next;
 } Node;
 
-Node* insertFirst(Node* head, char* data){
+Node* insertFirst(Node* head, element value){
     Node* newNode = (Node*)malloc(sizeof(Node));
-    strcpy(newNode->data, data);
+    newNode->data = value;
     newNode->next = head;
     return newNode;
 }
 
-Node* insert(Node* head, Node* pre, char* data){
+Node* insert(Node* head, Node* pre, element value){
     Node* newNode = (Node*)malloc(sizeof(Node));
-    strcpy(newNode->data, data);
+    strcpy(newNode->data, value);
     newNode->next = pre->next;
     pre->next = newNode;
     return head;
@@ -39,35 +40,34 @@ Node* delete(Node* head, Node* pre){
 
 void printList(Node* head){
     while(head != NULL){
-        printf("%s->", head->data);
+        printf("%d->", head->data);
         head = head->next;
     }
     printf("NULL\n");
 }
 
+int getSum(Node* head){
+    int sum = 0;
+    while(head != NULL){
+        sum += head->data;
+        head = head->next;
+    }
+    return sum;
+}
+
 int main(){
     Node* head = NULL;
-    Node* p;
+    int cnt, data;
 
-    char str[3][10] = {"melon", "kiwi", "apple"};
-    char find[10];
+    printf("노드의 개수: ");
+    scanf("%d", &cnt);
 
-    head = insertFirst(head, str[0]);
-    printList(head);
-
-    head = insertFirst(head, str[1]);
-    printList(head);
-
-    head = insertFirst(head, str[2]);
-    printList(head);
-
-    printf("찾을 데이터를 입력하세요\n");
-    scanf("%s", find);
-    for(p=head; p!=NULL; p=p->next){
-        if(strcmp(p->data, find) == 0){
-            printf("%s을 찾았습니다.", find);
-        }
+    for(int i=0; i<cnt; i++){
+        printf("\n노드 #%d 데이터 : ", i+1);
+        scanf("%d", &data);
+        head = insertFirst(head, data);
     }
+    printf("\n연결 리스트 데이터의 합 : %d \n", getSum(head));
 
     return 0;
 }
