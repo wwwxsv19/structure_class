@@ -21,20 +21,69 @@ void insertLast(Head* phead, element data){
     newNode->data = data;
     newNode->index = phead->size + 1;
 
-    
-
+    if(head == NULL){
+        phead->link = newNode;
+        newNode->prev = newNode;
+        newNode->next = newNode;
+    }
+    else{
+        newNode->prev = head->prev;
+        newNode->next = head;
+        head->prev->next = newNode;
+        head->prev = newNode;
+    }
+    phead->size++;
 }
 
 void deleteNode(Head* phead){
+    DNode* head = phead->link;
+    int index = head->index;
+    int count = head->data;
+
+    printf("%d ", index);
+
+    if(phead->size == 1){
+        phead->size--;
+        return ;
+    }
+
+    DNode* removed = phead->link;
+	DNode* p = removed->next;
+
+	if(count > 0){ 
+		for(int i=0; i<count; i++){
+			p = head->next;
+			if (p == removed){
+				p = p->next;
+			}
+		}
+	}
+	else{
+		for(int i=0; i<count * (-1); i++){
+			p = p->prev;
+			if(p == removed){
+				p = p->prev;
+			}
+		}
+	}
+	phead->link = p;
+	removed->prev->next = removed->next;
+	removed->next->prev = removed->prev;  
     
+    free(removed);
+	phead->size--;
 }
 
 void printList(Head* phead){
-    
+    DNode* p = phead->link;
+    do{
+        printf("[%d] ->", p->data);
+        p = p->next;
+    } while(p != phead->link);
 }
 
 int main(){
-	Head* head = (Head*)malloc(sizeof(head));
+	Head* head = (Head*)malloc(sizeof(Head));
 	head->link = NULL; head->size = 0;
 
     int size; // 연결 리스트 사이즈
