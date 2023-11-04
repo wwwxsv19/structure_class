@@ -4,8 +4,8 @@
 typedef int element;
 
 typedef struct DNode{
-    element index; // 풍선 터지는 순서
-    element data; // 풍선 데이터
+    element index; 
+    element data;
     struct DNode* prev;
     struct DNode* next;
 } DNode;
