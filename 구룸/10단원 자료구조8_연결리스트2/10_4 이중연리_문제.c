@@ -36,9 +36,8 @@ void insertLast(Head* phead, element data){
 }
 
 void deleteNode(Head* phead){
-    DNode* head = phead->link;
-    int index = head->index;
-    int count = head->data;
+    int index = phead->link->index;
+    int count = phead->link->data;
 
     printf("%d ", index);
 
@@ -47,26 +46,25 @@ void deleteNode(Head* phead){
         return ;
     }
 
-    DNode* removed = phead->link;
-	DNode* p = removed->next;
+    DNode* removed = (DNode*)malloc(sizeof(DNode));
+    removed = phead->link;
 
 	if(count > 0){ 
 		for(int i=0; i<count; i++){
-			p = head->next;
-			if (p == removed){
-				p = p->next;
+			phead->link = phead->link->next;
+			if (phead->link == removed){
+				phead->link = phead->link->next;
 			}
 		}
 	}
 	else{
 		for(int i=0; i<count * (-1); i++){
-			p = p->prev;
-			if(p == removed){
-				p = p->prev;
+			phead->link = phead->link->prev;
+			if(phead->link == removed){
+				phead->link = phead->link->prev;
 			}
 		}
 	}
-	phead->link = p;
 	removed->prev->next = removed->next;
 	removed->next->prev = removed->prev;  
     
