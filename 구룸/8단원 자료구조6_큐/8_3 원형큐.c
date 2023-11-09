@@ -19,7 +19,7 @@ int isEmpty(Queue* q){
 	return q->front == q->rear;
 }
 int isFull(Queue* q){
-	return (q->rear+1) % MAX_Q_SIZE == q->front;
+	return (q->rear + 1) % MAX_Q_SIZE == q->front;
 }
 
 void enQueue(Queue* q, element item){
@@ -32,17 +32,23 @@ void enQueue(Queue* q, element item){
 }
 
 element deQueue(Queue* q){
+	if(isEmpty(q)){
+		printf("큐는 공백상태입니다.\n");
+		return 0;
+	}
+	q->front = (q->front + 1) % MAX_Q_SIZE;
+	return q->data[q->front];
+}
+
+element peekQueue(Queue* q){
 	int temp;
 	if(isEmpty(q)){
 		printf("큐는 공백상태입니다.\n");
+		return 0;
 	}
-	else{
-		q->front = (q->front + 1) % MAX_Q_SIZE;
-		return q->data[q->front];
-
-	}
+	return q->data[(q->front + 1) % MAX_Q_SIZE];
 }
-	
+
 void printQueue(Queue* q){
 	int i;
 	printf("QUEUE(front=%d rear=%d) = ", q->front, q->rear);
