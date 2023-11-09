@@ -30,9 +30,7 @@ void enQueue(Queue* q, element item){
 	if(isFull(q)){
 		error("Queue is full\n");
 	}
-	else{
-		q->data[++q->rear] = item;
-	}
+	q->data[++q->rear] = item;
 }
 
 element deQueue(Queue* q){
@@ -40,9 +38,7 @@ element deQueue(Queue* q){
 	if(isEmpty(q)){
 		error("Queue is empty\n");
 	}
-	else{
-		return q->data[q->front++];
-	}
+	return q->data[++q->front];
 }
 	
 void queuePrint(Queue* q){
@@ -64,12 +60,17 @@ int main() {
 	
 	initQueue(&q);
 	
-	enQueue(&q,10); queuePrint(&q);
-	enQueue(&q,20); queuePrint(&q);
-	enQueue(&q,30); queuePrint(&q);
+	enQueue(&q, 10); queuePrint(&q);
+	enQueue(&q, 20); queuePrint(&q);
+	enQueue(&q, 30); queuePrint(&q);
+	enQueue(&q, 40); queuePrint(&q);
+	enQueue(&q, 50); queuePrint(&q);
+	enQueue(&q, 60); queuePrint(&q);
 	
-	item = deQueue(&q); queuePrint(&q);
-	item = deQueue(&q); queuePrint(&q);
+	printf("꺼낸 값 : %d\n", deQueue(&q)); queuePrint(&q);
+	printf("꺼낸 값 : %d\n", deQueue(&q)); queuePrint(&q);
+	printf("꺼낸 값 : %d\n", deQueue(&q)); queuePrint(&q);
+	printf("꺼낸 값 : %d\n", deQueue(&q)); queuePrint(&q);
 	
 	return 0;
 }
