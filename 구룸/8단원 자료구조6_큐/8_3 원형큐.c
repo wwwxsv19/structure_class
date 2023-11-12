@@ -17,7 +17,7 @@ void initQueue(Queue* q){
 }
 int isEmpty(Queue* q){
 	return q->front == q->rear;
-}
+} // made by wwwxsv19
 int isFull(Queue* q){
 	return (q->rear + 1) % MAX_Q_SIZE == q->front;
 }
@@ -35,7 +35,7 @@ element deQueue(Queue* q){
 	if(isEmpty(q)){
 		printf("큐는 공백상태입니다.\n");
 		return 0;
-	}
+	} // made by wwwxsv19
 	q->front = (q->front + 1) % MAX_Q_SIZE;
 	return q->data[q->front];
 }
@@ -54,7 +54,7 @@ void printQueue(Queue* q){
 	printf("QUEUE(front=%d rear=%d) = ", q->front, q->rear);
 	
 	if(isEmpty(q)){
-		printf("큐는 공백상태입니다.\n");
+		printf("큐는 공백상태입니다.\n"); // made by wwwxsv19
 		return;
 	}
 	

@@ -4,7 +4,7 @@
 
 #define MAX_STACK_SIZE 100
 
-typedef int element; 
+typedef int element; // made by wwwxsv19
 
 typedef struct{
 	int top;
@@ -18,11 +18,11 @@ void initStack(){
 }
 
 bool isEmpty(){
-	return (s.top == -1)? true:false;
+	return (s.top == -1); // made by wwwxsv19
 }
 
 bool isFull(){
-	return (s.top == MAX_STACK_SIZE-1)? true:false;
+	return (s.top == MAX_STACK_SIZE-1);
 }
 
 void push(element item){
@@ -37,7 +37,7 @@ element pop(){ //반환후 제거
 	if(isEmpty()){
 		printf("스택 : 텅 비었습니다.\n");
 		return 0;
-	}
+	} // made by wwwxsv19
 	return s.data[s.top--];
 }
 
@@ -58,7 +58,7 @@ int main(){
 	
 	printf("%d\n", pop());
 	printf("%d\n", peek());
-	printf("%d\n", pop());
+	printf("%d\n", pop()); // made by wwwxsv19
 	printf("%d\n", pop());
 	
 	return 0;

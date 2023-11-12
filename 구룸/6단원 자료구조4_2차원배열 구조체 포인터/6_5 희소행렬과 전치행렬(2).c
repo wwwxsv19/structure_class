@@ -7,7 +7,7 @@ typedef struct{
 	int row;
 	int col;
 	int value;
-} element;
+} element; // made by wwwxsv19
 
 typedef struct{
 	element data[MAX_TERMS];
@@ -16,7 +16,7 @@ typedef struct{
 	int terms;
 } Smatrix;
 
-Smatrix matrixTrans2(Smatrix a){
+Smatrix matrixTrans2(Smatrix a){ // made by wwwxsv19
 	int bindex = 0;
 	Smatrix b;
 	
@@ -47,7 +47,7 @@ void matrixPrint(Smatrix a){
 	printf("---------------------\n");
 }
 
-int main(void){
+int main(void){ // made by wwwxsv19
 	Smatrix m;
 
 	scanf("%d %d %d",&m.terms, &m.rows,&m.cols);

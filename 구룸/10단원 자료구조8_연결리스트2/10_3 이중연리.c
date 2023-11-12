@@ -3,7 +3,7 @@
 
 typedef int element;
 
-typedef struct DNode{
+typedef struct DNode{ // made by wwwxsv19
     element data;
     struct DNode* prev;
     struct DNode* next;
@@ -20,7 +20,7 @@ void dinsert(DNode* before, element data){
 
     newNode->prev = before;
     newNode->next = before->next;
-    before->next->prev = newNode;
+    before->next->prev = newNode; // made by wwwxsv19
     before->next = newNode;
 }
 
@@ -33,7 +33,7 @@ void ddelete(DNode* head, DNode* removed){
 
 void printDlist(DNode* phead){
     DNode* p;
-    for(p = phead->next; p != phead; p=p->next){
+    for(p = phead->next; p != phead; p=p->next){ // made by wwwxsv19
         printf("<-| |%d| |->", p->data);
     }
     printf("\n");
@@ -45,7 +45,7 @@ int main(){
     init(head);
 	
     printf("추가단계\n");
-	for(int i=0; i<5; i++){
+	for(int i=0; i<5; i++){ // made by wwwxsv19
 		dinsert(head, i);
 		printDlist(head);
 	}

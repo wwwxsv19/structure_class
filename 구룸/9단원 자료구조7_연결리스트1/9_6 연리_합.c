@@ -38,7 +38,7 @@ Node* delete(Node* head, Node* pre){
     return head;
 }
 
-void printList(Node* head){
+void printList(Node* head){ // made by wwwxsv19
     while(head != NULL){
         printf("%d->", head->data);
         head = head->next;
@@ -53,7 +53,7 @@ int getSum(Node* head){
         head = head->next;
     }
     return sum;
-}
+} // made by wwwxsv19
 
 int main(){
     Node* head = NULL;
@@ -70,4 +70,4 @@ int main(){
     printf("\n연결 리스트 데이터의 합 : %d \n", getSum(head));
 
     return 0;
-}
+} // made by wwwxsv19

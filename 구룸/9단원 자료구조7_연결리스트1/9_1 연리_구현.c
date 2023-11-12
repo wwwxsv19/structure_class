@@ -5,7 +5,7 @@
 
 typedef int element;
 
-typedef struct NODE{
+typedef struct NODE{ // made by wwwxsv19
 	element data;
 	struct Node* link;
 } Node;
@@ -26,7 +26,7 @@ int main(){
 	n3->data = 30;
 	n3->link = NULL;
 	
-	head = n1;
+	head = n1; // made by wwwxsv19
 	
 	while(head){
 		printf("%d->", head->data);

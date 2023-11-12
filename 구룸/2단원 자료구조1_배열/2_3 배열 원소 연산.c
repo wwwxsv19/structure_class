@@ -9,7 +9,7 @@ void inputArray(int a[], int size){
 void outputArray(int a[], int size){
 	for(int i=0; i<size; i++){
 		printf("%d ", a[i]);
-	}
+	} // made by wwwxsv19
 	printf("\n");
 }
 
@@ -24,7 +24,7 @@ int insertArray(int a[], int num, int index, int size){
 		}
 		a[index] = num;
 		size++;
-	}
+	} // made by wwwxsv19
 	return size;
 }
 
@@ -45,7 +45,7 @@ int deleteArray(int a[], int index, int size){
 
 int main(){
 	int a[10], size=0 ;
-	
+	// made by wwwxsv19
 	size = insertArray(a, 10, 0, size);
 	size = insertArray(a, 20, 1, size);
 	size = insertArray(a, 30, 2, size);

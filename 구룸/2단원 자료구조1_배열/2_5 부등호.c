@@ -9,7 +9,7 @@ int main(){
 	for(int i=0; i<n; i++){
 		scanf("%d", &arr[i]);
 	}
-	
+	// made by wwwxsv19
 	for(int i=0; i<n; i++){
 		printf("%d: ", i+1);
 		
@@ -20,7 +20,7 @@ int main(){
 			printf("%c", (j!=n-1)? ' ':'\n');
 		}
 	}
-	
+	// made by wwwxsv19
 	free(arr);
 	
 	return 0;

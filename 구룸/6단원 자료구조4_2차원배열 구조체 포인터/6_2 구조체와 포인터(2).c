@@ -11,7 +11,7 @@ int main(){
 	data d1;
 	data* d2 = (data*)malloc(sizeof(data));
 	
-    d1.p = &n;
+    d1.p = &n; // made by wwwxsv19
 	d2->p = &n;
 	
     printf("%d\n", *d1.p + *d2->p);

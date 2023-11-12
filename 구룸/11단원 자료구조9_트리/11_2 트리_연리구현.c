@@ -3,7 +3,7 @@
 #include <memory.h>
 
 typedef struct TNode{
-	char data;
+	char data; // made by wwwxsv19
 	struct TNode* left;
 	struct TNode* right;
 } TNode;
@@ -18,7 +18,7 @@ TNode* makeRootNode(char data, TNode* leftNode, TNode* rightNode){
 
 void preorder(TNode* root){
 	TNode* x = root;
-	if(x == NULL) return ;
+	if(x == NULL) return ; // made by wwwxsv19
 	printf("%c", x->data);
 	preorder(x->left);
 	preorder(x->right);
@@ -28,7 +28,7 @@ void inorder(TNode* root){
 	TNode* x = root;
 	if(x == NULL) return ;
 	inorder(x->left);
-	printf("%c", x->data);
+	printf("%c", x->data); // made by wwwxsv19
 	inorder(x->right);
 }
 
@@ -60,7 +60,7 @@ int main(){
 	
 	free(n1); free(n2); free(n3);
 	free(n4); free(n5); free(n6);
-	free(n7);
+	free(n7); 
 	
 	return 0;
 }

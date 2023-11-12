@@ -18,7 +18,7 @@ void printList(Node* head){
 }
 
 Node* reverse(Node* head){
-    Node* p = head;
+    Node* p = head; // made by wwwxsv19
     Node* q = NULL; 
     Node* r;
 
@@ -34,7 +34,7 @@ Node* reverse(Node* head){
 
 Node* insertFirst(Node* head, int data){
     Node* newNode = (Node*)malloc(sizeof(Node));
-    newNode->data = data;
+    newNode->data = data; // made by wwwxsv19
     newNode->next = head;
     return newNode;
 }
@@ -49,5 +49,5 @@ int main(){
     printf("역순으로 출력\n");
     printList(head);
 
-    return 0;
+    return 0; // made by wwwxsv19
 }

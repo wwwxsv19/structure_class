@@ -33,7 +33,7 @@ void enQueue(Queue* q, element item){
 	q->data[++q->rear] = item;
 }
 
-element deQueue(Queue* q){
+element deQueue(Queue* q){ // made by wwwxsv19
 	int temp;
 	if(isEmpty(q)){
 		error("Queue is empty\n");
@@ -58,7 +58,7 @@ int main() {
 	element item = 0;
 	Queue q;
 	
-	initQueue(&q);
+	initQueue(&q); // made by wwwxsv19
 	
 	enQueue(&q, 10); queuePrint(&q);
 	enQueue(&q, 20); queuePrint(&q);

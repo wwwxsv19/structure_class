@@ -4,7 +4,7 @@
 typedef struct Person{
 	char name[10];
 	int age;
-} Ps;
+} Ps; // made by wwwxsv19
 
 void inputData( Ps *p ){
 	scanf("%s %d", p->name, &p->age);

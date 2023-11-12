@@ -10,7 +10,7 @@ typedef struct STACK{
 	int data[STACK_SIZE];
 } Stack;
 
-void initStack(Stack *s){
+void initStack(Stack *s){ // made by wwwxsv19
 	s->top = -1;
 }
 
@@ -34,7 +34,7 @@ void pop(Stack *s){  //스택이 비어 있으면 문구 출력 후 0 리턴, �
 	if(isEmpty(s)){
 		printf("stack is empty\n");
 		return ;
-	}
+	} // made by wwwxsv19
 	else{
 		printf("pop 데이터 : %d\n", s->data[s->top--]);
 	}
@@ -63,7 +63,7 @@ int main(){
 				pop(&s);
 				break;
 				
-			case 0:
+			case 0: // made by wwwxsv19
 				break;
 			
 			default:

@@ -15,7 +15,7 @@ void printList(Node* head){
     if(head == NULL) return ;
     do{
         if(p == NULL) break;
-        printf("%d->", p->data);
+        printf("%d->", p->data); // made by wwwxsv19
         p = p->next;
     } while(p != head->next);
     printf("\n");
@@ -45,12 +45,12 @@ Node* insertLast(Node* head, element data){
     else{
         newNode->next = head->next;
         head->next = newNode;
-        head = newNode;
+        head = newNode; // made by wwwxsv19
     }
     return head;
 }
 
-Node* changeCard(Node* head){
+Node* changeCard(Node* head){ // made by wwwxsv19
     Node* removed = head->next;
     head->next = removed->next;
     free(removed);
@@ -64,7 +64,7 @@ int main() {
 	printf("카드개수 입력\n");
     scanf("%d",&n);
 
-	for(int i=1; i<=n; i++){
+	for(int i=1; i<=n; i++){ // made by wwwxsv19
 		head = insertLast(head, i);
 	}
 

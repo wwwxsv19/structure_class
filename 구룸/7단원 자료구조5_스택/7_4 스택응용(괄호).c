@@ -7,7 +7,7 @@ typedef char element;
 typedef struct{
 	element data[STACK_SIZE];
 	int top;
-} Stack;
+} Stack; // made by wwwxsv19
 
 void initStack( Stack *s ){
 	s->top = -1;
@@ -27,7 +27,7 @@ void push( Stack *s, element c ){
 	s->data[s->top] = c;
 }
 element pop( Stack *s ){
-	if(isEmpty(s)){
+	if(isEmpty(s)){ // made by wwwxsv19
 		printf("stack is empty\n");
 		return 0;
 	}
@@ -41,7 +41,7 @@ int checkTest(char expr[]){
 	
 	initStack(&s);
 	
-    for(i=0;expr[i]!='\0';i++){
+    for(i=0;expr[i]!='\0';i++){ // made by wwwxsv19
 		ch = expr[i];
 		switch(ch){
 			case '(':
@@ -71,7 +71,7 @@ int main(){
 	Stack s;
 	char expr[20];
 	
-	printf("괄호포함 수식 입력 : ");
+	printf("괄호포함 수식 입력 : "); // made by wwwxsv19
 	scanf("%s", expr);
 	
 	if (checkTest(expr)) printf("성공");

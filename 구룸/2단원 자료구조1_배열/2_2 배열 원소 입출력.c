@@ -14,6 +14,6 @@ int main(){
 	for( ; i>=0; i--){
 		printf("%d ", arr[i]);
 	}
-	
+	// made by wwwxsv19
 	return 0;
 }

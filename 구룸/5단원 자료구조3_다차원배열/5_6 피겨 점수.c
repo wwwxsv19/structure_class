@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 void genRandom(int a[][5], int r){
-	for(int i=0; i<r; i++)
+	for(int i=0; i<r; i++) // made by wwwxsv19
 		for(int j=0; j<5; j++)
 			a[i][j] = rand()%10+1;
 }
@@ -11,7 +11,7 @@ void outputArray(int a[][5], int r){
 		for(int j=0; j<5; j++){
 			printf("%5d", a[i][j]);
 		}
-		printf("\n");
+		printf("\n"); // made by wwwxsv19
 	}
 }
 	
@@ -24,7 +24,7 @@ float averageScore(int *row, int size){
 	}
 	num -= max+min;
 	return (float)(num/3.00);
-}
+} // made by wwwxsv19
 
 int main() {
 	int score[4][5];

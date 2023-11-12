@@ -8,7 +8,7 @@ typedef int element;
 typedef struct ArrayList{
     element array[MAX];
     int size;
-} AL;
+} AL; // made by wwwxsv19
 
 
 void init(AL* L){
@@ -32,7 +32,7 @@ element getEntry(AL* L, int pos){
 void printList(AL* L){
     for(int i=0; i<L->size; i++){
         printf("%d->", L->array[i]);
-    }
+    } // made by wwwxsv19
     printf("\n");
 }
 
@@ -49,7 +49,7 @@ void insert(AL* L, int pos, element item){
         for(int i=L->size-1; i>=pos; i--){
             L->array[i+1] = L->array[i];
         }
-        L->array[pos] = item;
+        L->array[pos] = item; // made by wwwxsv19
         L->size++;
     }
 }
@@ -64,7 +64,7 @@ void delete(AL* L, int pos){
     }
     L->size--;
 }
-
+// made by wwwxsv19
 int main(){
     AL list;
 

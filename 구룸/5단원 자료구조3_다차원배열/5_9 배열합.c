@@ -5,7 +5,7 @@ int main(){
 	
 	int **arr = (int**)malloc(sizeof(int*) * n);
 	for(i=0; i<n; i++){
-		arr[i] = (int*)malloc(sizeof(int) * m);
+		arr[i] = (int*)malloc(sizeof(int) * m); // made by wwwxsv19
 	}
 	
 	for(i=0; i<n; i++){
@@ -23,7 +23,7 @@ int main(){
 			for(int b = j-1; b<y; b++){
 				num+=arr[a][b];
 			}
-		}
+		} // made by wwwxsv19
 		printf("%d\n", num);
 	}
 

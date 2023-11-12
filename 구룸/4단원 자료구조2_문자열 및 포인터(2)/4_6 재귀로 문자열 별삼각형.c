@@ -8,7 +8,7 @@ int f(int n){
 }
 
 int main(){
-	int n;
+	int n; // made by wwwxsv19
 	scanf("%d", &n);
 	f(n);
 	

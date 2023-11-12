@@ -12,7 +12,7 @@ int main(){
 	}
 	
 	for(int i=4; i>=0; i--){
-		printf("%c", a[i]);
+		printf("%c", a[i]); // made by wwwxsv19
 	}
 	
 	return 0;

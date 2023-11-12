@@ -6,7 +6,7 @@ int main(){
 		scanf("%d", &arr[i]);
 		if(arr[i] > arr[max]) max = i;
 	}
-	
+	// made by wwwxsv19
 	printf("%d\n%d", arr[max], max+1);
 	
 	return 0;

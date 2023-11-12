@@ -7,7 +7,7 @@ char myStrlen(const char* str); // 함수 선언
 unsigned int main(void){
 	char s[]="hello"; 
 	printf("%d\n", myStrlen(s));
-	return 0;
+	return 0; // made by wwwxsv19
 }
 
 unsigned int myStrlen(const char* str){
@@ -30,7 +30,7 @@ int main(){
 	for(i=0; s[i]!='\0'; i++){
 		printf("%08X %c\n", &s[i], s[i]); // 각 주소와 그 값 
 	}
-	return 0;
+	return 0; // made by wwwxsv19
 }
 */
 
@@ -49,5 +49,5 @@ int main(){
 	int size = sizeof(array)/sizeof(array[0]);
 	outputArray(array, size);
 	return 0;
-}
+} // made by wwwxsv19
 */

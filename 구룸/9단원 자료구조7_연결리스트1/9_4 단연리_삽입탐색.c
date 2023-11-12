@@ -14,7 +14,7 @@ void deleteAll(Node* head){
         head = head->next;
         free(removed);
         removed = removed->next = NULL;
-    }
+    } // made by wwwxsv19
 }
 
 void printList(Node* head){
@@ -32,7 +32,7 @@ Node* insertFirst(Node* head, char* x){
     Node* newNode = (Node*)malloc(sizeof(Node));
     strcpy(newNode->data, x);
     newNode->next = head;
-    return newNode;
+    return newNode; // made by wwwxsv19
 }
 
 Node* insertMiddle(Node* head, Node* pre, char* x){
@@ -52,7 +52,7 @@ Node* insertMiddle(Node* head, Node* pre, char* x){
 
 Node* insertLast(Node* head, char* x){
     Node* newNode = (Node*)malloc(sizeof(Node));
-    Node* temp;
+    Node* temp; // made by wwwxsv19
 
     strcpy(newNode->data, x);
     newNode->next = NULL;
@@ -67,7 +67,7 @@ Node* insertLast(Node* head, char* x){
 }
 
 Node* searchNode(Node* head, char* x){
-    Node* temp = head;
+    Node* temp = head; // made by wwwxsv19
 
     while(temp != NULL){
         if(strcmp(temp->data, x) == 0) return temp;
@@ -85,7 +85,7 @@ int main(){
 	printList(head);
 	
 	printf("(2) 리스트 처음에 [수]노드 삽입하기! \n");
-	head =insertFirst( head, "수");
+	head =insertFirst( head, "수"); // made by wwwxsv19
 	printList(head);
 	
 	printf("(3) 리스트 마지막에 [금]노드 삽입하기! \n");
@@ -104,7 +104,7 @@ int main(){
 	
 	printf("(6) 리스트 공간을 해제하여 공백 리스트로 만들기! \n");
 	deleteAll(head);
-	printList(head);
+	printList(head); // made by wwwxsv19
 
 	return 0;
 }

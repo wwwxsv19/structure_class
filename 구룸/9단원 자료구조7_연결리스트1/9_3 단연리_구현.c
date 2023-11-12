@@ -7,7 +7,7 @@ typedef struct Node{
 	element data;
 	struct Node* next;
 } Node;
-
+// made by wwwxsv19
 Node* insertFirst(Node* head, element data){
 	Node* node = (Node*)malloc(sizeof(Node));
 	node->data = data;
@@ -20,7 +20,7 @@ void insert(Node* pre, element data){
 	node->next = pre->next;
 	pre->next =  node; 
 }
-Node* deleteFirst(Node* head){
+Node* deleteFirst(Node* head){ // made by wwwxsv19
 	if (head == NULL) return NULL;
 	Node* removed = head;
     Node* newhead = head->next;
@@ -34,7 +34,7 @@ void delete(Node* pre){
 }
 void printList(Node* head){
 	while(head!=NULL){
-		printf("%d->", head->data); 
+		printf("%d->", head->data); // made by wwwxsv19
 		head = head->next;
 	}
 	printf("NULL\n");

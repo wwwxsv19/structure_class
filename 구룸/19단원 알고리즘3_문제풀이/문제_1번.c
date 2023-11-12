@@ -10,4 +10,4 @@ int main(){
 	printf("%d", sum);
 	
 	return 0;
-}
+} // made by wwwxsv19

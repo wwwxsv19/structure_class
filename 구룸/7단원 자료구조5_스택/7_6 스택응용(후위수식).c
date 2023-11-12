@@ -10,7 +10,7 @@ typedef struct{
 
 void initStack(Stack* s){
 	s->top = -1;
-}
+} // made by wwwxsv19
 int isEmpty(Stack* s){
 	return s->top == -1; 
 }
@@ -26,7 +26,7 @@ void push(Stack* s, element c){
 
 element pop(Stack* s ){
 	if(!isEmpty(s)){
-		return s->data[s->top--];
+		return s->data[s->top--]; // made by wwwxsv19
 	}
 }
 
@@ -50,7 +50,7 @@ int main(){
 				case '-': push(&s, m-n); break;
 				case '*': push(&s, n*m); break;
 			}
-		}
+		} // made by wwwxsv19
 	}
 	
 	printf("%d", pop(&s));

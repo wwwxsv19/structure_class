@@ -11,7 +11,7 @@ typedef struct Node{
 Node* insert(Node* head, element data){
     Node* newNode = (Node*)malloc(sizeof(Node));
     newNode->data = data;
-    if(head == NULL){
+    if(head == NULL){ // made by wwwxsv19
         newNode->next = newNode;
         head = newNode;
     }
@@ -26,7 +26,7 @@ Node* insert(Node* head, element data){
 void delete(Node* head, int count){
     Node* p = head;
     Node* removed = p;
-    printf("<");
+    printf("<"); // made by wwwxsv19
     while(p->next != p){
         for(int i=0; i<count-1; i++){
             p = p->next;
@@ -42,7 +42,7 @@ void delete(Node* head, int count){
 }
 
 int main() {
-	Node* head = NULL;
+	Node* head = NULL; // made by wwwxsv19
 	
     int n, count;
     scanf("%d %d", &n, &count);

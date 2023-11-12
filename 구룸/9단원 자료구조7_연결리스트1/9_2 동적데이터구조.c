@@ -7,7 +7,7 @@ typedef struct NODE{
 	element data;
 	struct Node* next;
 } Node;
-
+// made by wwwxsv19
 Node* createNode(element data){
 	Node* new;
 	new = (Node*)malloc(sizeof(Node));
@@ -23,7 +23,7 @@ void All(Node* ptr){
 			ptr = ptr->next;
 		}
 		else{
-			printf("%d", ptr->data);
+			printf("%d", ptr->data); // made by wwwxsv19
 			return ; // 프린트 종료
 		}
 	}
@@ -39,7 +39,7 @@ int main(){
 	head = node1;
 
 	node1->next = node2;
-	node2->next = node3;
+	node2->next = node3; // made by wwwxsv19
 	node3->next = NULL;
 	
 	All(head);

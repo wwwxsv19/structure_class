@@ -10,7 +10,7 @@ typedef struct Goods{
 } Goods;
 
 int main(){
-	Goods* item1 = (Goods*)malloc(sizeof(Goods));
+	Goods* item1 = (Goods*)malloc(sizeof(Goods)); // made by wwwxsv19
 	
 	strcpy(item1->name, "교향곡 전집");
 

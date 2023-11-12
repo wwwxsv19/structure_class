@@ -5,10 +5,10 @@ int main() {
 	int num = 0, i, len;
 	
 	for(i=0; str[i]!='\0'; i++){
-		if(str[i]==','){
+		if(str[i] == ','){
 			printf("%d\n", num);
 			num = 0;
-			continue;
+			continue; // made by wwwxsv19
 		}
 		num = num*10+(str[i]-'0');
 	}

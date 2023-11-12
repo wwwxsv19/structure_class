@@ -9,7 +9,7 @@ int main() {
 	for(int i=0; s[i]!='\0'; i++){
 		n=s[i];
 		if(n>90) n-=32;
-		n-=65;
+		n-=65; // made by wwwxsv19
 		cnt[n]++;
 	}
 	
@@ -23,7 +23,7 @@ int main() {
 			break;
 		}
 	}
-	
+	// made by wwwxsv19
 	if(max != -1) printf("%c", max+65);
 	else printf("?");
 	

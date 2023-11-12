@@ -9,7 +9,7 @@ typedef struct{
 	int top;
 } Stack;
 
-void initStack( Stack *s ){
+void initStack( Stack *s ){ // made by wwwxsv19
 	s->top = -1;
 }
 int isFull( Stack *s ){
@@ -26,7 +26,7 @@ void push( Stack *s, element c ){
 	s->top++;
 	s->data[s->top] = c;
 }
-
+// made by wwwxsv19
 void pop( Stack *s ){
 	if(isEmpty(s)){
 		return ;
@@ -45,7 +45,7 @@ int main(){
 	
 	initStack(&s);
 	
-	printf("문자열 입력 : ");
+	printf("문자열 입력 : "); // made by wwwxsv19
 	scanf("%s", str);
 	
 	for(i=0; str[i]!='\0'; i++){

@@ -26,7 +26,7 @@ Node* deleteFirst(Node* head){
     if(head == NULL) return NULL;
     Node* removed = head;
     Node* newHead = head->next;
-    free(removed);
+    free(removed); // made by wwwxsv19
     return newHead;
 }
 
@@ -45,7 +45,7 @@ void printList(Node* head){
     printf("NULL\n");
 }
 
-int main(){
+int main(){ // made by wwwxsv19
     Node* head = NULL;
     Node* p;
 
@@ -58,7 +58,7 @@ int main(){
     head = insertFirst(head, str[1]);
     printList(head);
 
-    head = insertFirst(head, str[2]);
+    head = insertFirst(head, str[2]); // made by wwwxsv19
     printList(head);
 
     printf("찾을 데이터를 입력하세요\n");

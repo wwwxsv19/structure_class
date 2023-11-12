@@ -7,7 +7,7 @@ int main() {
         {1991, 0.2},
         {1992, 1.1},
         {1993, 0.5},
-        {1994, 0.1},
+        {1994, 0.1}, // made by wwwxsv19
         {1995, 1.2},
         {1996, -0.3},
         {1997, -0.1},
@@ -25,7 +25,7 @@ int main() {
             printf("%.f ", enso[i][0]);
             if (enso[i][1] > enso[elnino][1]) {
                 elnino = i;
-            }
+            } // made by wwwxsv19
         }
     }
     printf("\n");
@@ -38,7 +38,7 @@ int main() {
             if (enso[i][1] < enso[lanina][1]) {
                 lanina = i;
             }
-        }
+        } // made by wwwxsv19
     }
     printf("\n");
     printf("가장 강한 라니냐: %.f\n", enso[lanina][0]);
@@ -56,7 +56,7 @@ int main() {
             if (fabs(enso[i][1]) == minAbsStrength) {
                 printf("%.f ", enso[i][0]);
             }
-        }
+        } // made by wwwxsv19
     }
     printf("\n");
 

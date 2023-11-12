@@ -1,11 +1,11 @@
 #include <stdio.h>
 void inputArray( int a[][3], int r){
-    for(int i=0; i<r; i++){
+    for(int i=0; i<r; i++){ // made by wwwxsv19
         for(int j=0; j<3; j++){
             scanf("%d", &a[i][j]);
         }
     }
-}
+} // made by wwwxsv19
 void outputArray( int a[][3], int r){
     for(int i=0; i<r; i++){
         for(int j=0; j<3; j++){
@@ -19,7 +19,7 @@ void addMatrix(int a[][3], int b[][3], int r){
         for(int j=0; j<3; j++){
             printf("%5d", a[i][j] + b[i][j]);
         }
-        printf("\n");
+        printf("\n"); // made by wwwxsv19
     }
 }
 void subMatrix(int a[][3], int b[][3], int r){

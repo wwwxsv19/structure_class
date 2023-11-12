@@ -4,7 +4,7 @@
 typedef int element;
 
 typedef struct Node{
-    element data;
+    element data; // made by wwwxsv19
     struct Node* next;
 } Node;
 
@@ -33,7 +33,7 @@ Node* insertFirst(Node* head, element data){
         newNode->next = head->next;
         head->next = newNode;
     }
-    return head;
+    return head; // made by wwwxsv19
 }
 
 Node* insertLast(Node* head, element data){
@@ -55,7 +55,7 @@ int main() {
 	Node* head = NULL;
 	
     printf("처음위치에 연결\n");
-	
+	// made by wwwxsv19
     for(int i=1; i<5; i++){
 		head = insertFirst(head, i);
 	}

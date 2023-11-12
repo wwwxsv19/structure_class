@@ -1,7 +1,7 @@
 #include <stdio.h>
 int myStrlen( char str[] );
 int myStrlen2( char str[] );
-int myStrlen3( char str[] );  
+int myStrlen3( char str[] ); // made by wwwxsv19
 int myStrlen4( char str[], char c );  
 
 int main() {
@@ -28,7 +28,7 @@ int myStrlen2( char str[] ){
 		if(str[i]>=48 && str[i]<=57) num++; 
 	}
 	return num;
-}
+} // made by wwwxsv19
 
 int myStrlen3( char str[] ){//  공백제외 문자길이 구하는 코드
 	int num=0;

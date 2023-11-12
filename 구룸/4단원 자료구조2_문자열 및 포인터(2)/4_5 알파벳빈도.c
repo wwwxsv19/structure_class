@@ -8,7 +8,7 @@ int main() {
 	
 	for(int i=0; s[i]!='\0'; i++){
 		num = s[i];
-		aph[num-65]++;
+		aph[num-65]++; // made by wwwxsv19
 	}	
 	
 	for(int i=0; i<26; i++){

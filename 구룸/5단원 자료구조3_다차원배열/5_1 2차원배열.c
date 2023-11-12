@@ -16,7 +16,7 @@ int main(){
             printf("%d %8X, ", a[i][j], &a[i][j]); // 행 우선이다
         }
         printf("\n");
-    }
+    } // made by wwwxsv19
     
     return 0;
 }
@@ -35,7 +35,7 @@ int main(){
         printf("\n");
     }
 
-    return 0;
+    return 0; // made by wwwxsv19
 }
 */
 

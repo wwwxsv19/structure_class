@@ -15,7 +15,7 @@ void transMatrix(int a[][COLS], int b[][COLS]){
 	for(int i=0; i<3; i++){
 		for(int j=0; j<3; j++){
 			b[j][i] = a[i][j];
-		}
+		} // made by wwwxsv19
 	}
 }
 
@@ -27,7 +27,7 @@ void printMatrix(int a[][COLS]){
 		printf("\n");
 	}
 }
-
+// made by wwwxsv19
 int main(){
 	int array1[ROWS][COLS];
 	int array2[ROWS][COLS];
@@ -40,5 +40,5 @@ int main(){
 	printf("  --------------\n");
 	printMatrix(array2);
 	
-	return 0;
+	return 0; // made by wwwxsv19
 }

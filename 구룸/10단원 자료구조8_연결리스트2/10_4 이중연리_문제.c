@@ -7,7 +7,7 @@ typedef struct DNode{
     element index; 
     element data;
     struct DNode* prev;
-    struct DNode* next;
+    struct DNode* next; // made by wwwxsv19
 } DNode;
 
 typedef struct Head{
@@ -42,7 +42,7 @@ void deleteNode(Head* phead){
     printf("%d ", index);
 
     if(phead->size == 1){
-        phead->size--;
+        phead->size--; // made by wwwxsv19
         return ;
     }
 
@@ -53,7 +53,7 @@ void deleteNode(Head* phead){
 		for(int i=0; i<count; i++){
 			phead->link = phead->link->next;
 			if (phead->link == removed){
-				phead->link = phead->link->next;
+				phead->link = phead->link->next; // made by wwwxsv19
 			}
 		}
 	}
@@ -75,7 +75,7 @@ void deleteNode(Head* phead){
 void printList(Head* phead){
     DNode* p = phead->link;
     do{
-        printf("[%d] ->", p->data);
+        printf("[%d] ->", p->data); // made by wwwxsv19
         p = p->next;
     } while(p != phead->link);
 }
@@ -90,7 +90,7 @@ int main(){
     int num; // 풍선 노드의 값 입력
 	for(int i=0; i<size; i++){
 		scanf("%d", &num);
-        insertLast(head, num);
+        insertLast(head, num); // made by wwwxsv19
 	}
 
     for(int i=0; i<size; i++){

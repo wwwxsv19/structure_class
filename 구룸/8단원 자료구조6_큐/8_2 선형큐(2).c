@@ -4,7 +4,7 @@
 typedef int element ;
 
 typedef struct {
-	element* data;
+	element* data; // made by wwwxsv19
 	int front;
 	int rear;
 	int size;
@@ -28,7 +28,7 @@ int isEmpty( Queue *q ){
 void enQueue( Queue *q, element data ){
 	if(isFull(q)){
 		printf("Queue is full\n");
-		return ;
+		return ; // made by wwwxsv19
 	}
 	q->data[++q->rear] = data;
 }
@@ -44,7 +44,7 @@ void printAll( Queue *q ){
 	for(i=0; i<q->size; i++){
 		if (i <= q->front || i > q->rear){
 			printf(" | ");
-		}
+		} // made by wwwxsv19
 		else{
 			printf("%d | ", q->data[i]);
 		}
@@ -70,7 +70,7 @@ int main() {
 	enQueue(q, 50); printAll(q);
 	
 	data = deQueue(q); printAll(q);
-	
+	// made by wwwxsv19
 	enQueue(q, data); printAll(q);
 	
 	destroyQueue( q );

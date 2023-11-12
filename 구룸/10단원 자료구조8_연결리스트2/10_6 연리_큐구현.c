@@ -7,7 +7,7 @@ typedef char element;
 typedef struct QNode{
     element data;
     struct QNode* link;
-} QNode;
+} QNode; // made by wwwxsv19
 
 typedef struct QADT{
     QNode* front;
@@ -22,7 +22,7 @@ QList* createQList(){
     return q;
 }
 
-int isEmpty(QList* q){
+int isEmpty(QList* q){ // made by wwwxsv19
     if(q->front == NULL){
         // printf("\n Linked Queue is empty! \n");
         return 1;
@@ -40,7 +40,7 @@ void enQueue(QList* q, element data){
         q->rear = newNode;
         return ;
     }
-    q->rear->link = newNode;
+    q->rear->link = newNode; // made by wwwxsv19
     q->rear = newNode;
 }
 
@@ -52,6 +52,7 @@ element deQueue(QList* q){
     q->front = q->front->link;
     if(isEmpty(q)) q->rear = NULL;
     free(removed);
+    // made by wwwxsv19
     return data;
 }
 

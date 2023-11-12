@@ -16,7 +16,7 @@ int main() {
 			}
 		}
 	}
-	
+	// made by wwwxsv19
 	for(int i=0; i<n; i++){
 		printf("%d\n", score[i]); // 점수들 출력
 	}

@@ -9,7 +9,7 @@ int main(){
 				a[i][j]=num++;
 			}
 		}
-		else{
+		else{ // made by wwwxsv19
 			for(int j=n-1; j>=0; j--){
 				a[i][j]=num++;
 			}

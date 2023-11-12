@@ -7,7 +7,7 @@ int main(){
 	scanf("%d %d", &a, &b);
 	
 	for(int i=a-1; i<b; i++){
-		printf("%c", str[i]);
+		printf("%c", str[i]); // made by wwwxsv19
 	}
 	
 	return 0;

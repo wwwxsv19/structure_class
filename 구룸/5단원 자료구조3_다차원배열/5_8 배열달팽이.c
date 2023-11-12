@@ -3,7 +3,7 @@ int main(){
 	int a[50][50], num=0, lt, rt, top, bt, n;
 	
 	scanf("%d", &n);
-	
+	// made by wwwxsv19
 	rt = bt = n;
 	lt = top = 1;
 	
@@ -27,7 +27,7 @@ int main(){
 	}
 	
 	for(int i=1; i<=n; i++){
-		for(int j=1; j<=n; j++){
+		for(int j=1; j<=n; j++){ // made by wwwxsv19
 			printf("%d ", a[i][j]);
 		}
 		printf("\n");

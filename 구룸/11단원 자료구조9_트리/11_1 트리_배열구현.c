@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void preorder(char t[], int i, int size){
-	if(t[i] == NULL || i > size) return ;
+	if(t[i] == NULL || i > size) return ; // made by wwwxsv19
 	printf("%c ", t[i]);
 	preorder(t, i*2, size);
 	preorder(t, (i*2)+1, size);
@@ -15,7 +15,7 @@ void inorder(char t[], int i, int size){
 }
 
 void postorder(char *t, int i, int size){
-	if(t[i] == NULL || i > size) return ;
+	if(t[i] == NULL || i > size) return ; // made by wwwxsv19
 	postorder(t, i*2, size);
 	postorder(t, (i*2)+1, size);
 	printf("%c ", t[i]);
@@ -29,7 +29,7 @@ int main(){
 	preorder(tree, 1, size);
 	
 	printf("\n<<중위 탐색>>\n");
-	inorder(tree, 1, size);
+	inorder(tree, 1, size); // made by wwwxsv19
 	
 	printf("\n<<후위 탐색>>\n");
     postorder(tree, 1, size);

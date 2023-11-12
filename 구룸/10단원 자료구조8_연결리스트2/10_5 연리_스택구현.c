@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 typedef int element;
-
+// made by wwwxsv19
 typedef struct Node{
 	element data;
 	struct Node* next;
@@ -18,7 +18,7 @@ int isEmpty(Node* top){
 
 void push(Node* top, element data){
 	Node* node = (Node*)malloc(sizeof(Node));
-	node->data = data;
+	node->data = data; // made by wwwxsv19
 	node->next = top->next;
 	top->next = node;
 }
@@ -30,7 +30,7 @@ void pop(Node* top){
 	if(isEmpty(top->next)){
 		top->next = NULL;
 		return ;
-	}
+	} // made by wwwxsv19
 	else{
 		temp = top->next;
 		top->next = temp->next;
@@ -44,7 +44,7 @@ void printList(Node* top){
 	while(p != NULL){
 		printf("%d->", p->data);
 		p = p->next;
-	}
+	} // made by wwwxsv19
 	printf("NULL\n");
 }
 

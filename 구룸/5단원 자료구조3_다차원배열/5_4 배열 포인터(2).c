@@ -1,13 +1,13 @@
 #include <stdio.h>
 void inputArray(int a[][4], int row){
-	for(int i=0; i<row; i++){
+	for(int i=0; i<row; i++){ // made by wwwxsv19
 		for(int j=0; j<4; j++){
 			scanf("%d", &a[i][j]);
 		}
 	}
 }	
 
-int totArray(int* a, int size){
+int totArray(int* a, int size){ // made by wwwxsv19
 	int tot=0;
 	for(int i=0; i<size; i++){
 		tot += a[i];

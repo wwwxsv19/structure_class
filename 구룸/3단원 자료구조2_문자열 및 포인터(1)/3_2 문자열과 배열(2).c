@@ -6,7 +6,7 @@ int main(){
 	scanf("%s", alpha);
 	getchar();
 	scanf("%c", &c);
-	
+	// made by wwwxsv19
 	while(1){
 		if(alpha[i]==c) break;
 		else i++;

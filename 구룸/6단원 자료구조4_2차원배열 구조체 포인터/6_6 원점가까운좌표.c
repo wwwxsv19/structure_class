@@ -6,7 +6,7 @@ typedef struct point{
 	int x, y;
 } POINT;
 
-void inputPoint( POINT *p ){
+void inputPoint( POINT *p ){ // made by wwwxsv19
 	for(int i=0; i<5; i++){
 		scanf("%d %d", &p[i].x, &p[i].y);
 	}
@@ -19,7 +19,7 @@ void outputPoint( POINT p ){
 POINT distance(POINT *p) {
 	POINT c = p[0];
 	int n = abs(p[0].x) + abs(p[0].y);
-
+// made by wwwxsv19
 	for (int i = 1; i < 5; i++) {
 		int m = abs(p[i].x) + abs(p[i].y);
 		if (m < n) {
@@ -38,7 +38,7 @@ POINT distance(POINT *p) {
 
 int main() {
 	POINT p[5];
-	POINT origin;
+	POINT origin; // made by wwwxsv19
 	
 	inputPoint(p);
 	

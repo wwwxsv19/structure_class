@@ -11,7 +11,7 @@ void initStack(Stack *s){
 	s->top = -1;
 }
 int isFull(Stack *s){
-	return s->top == MAX-1;
+	return s->top == MAX-1; // made by wwwxsv19
 }
 int isEmpty(Stack *s){	
 	return s->top == -1;
@@ -24,7 +24,7 @@ void push(Stack* s, char c){
 	else{
 		s->str[++s->top] = c;
 	}
-}
+} // made by wwwxsv19
 
 char pop(Stack *s){
 	if(isEmpty(s)){
@@ -46,7 +46,7 @@ int palindrome(char string[]){
 	}
 	
 	for(i=0; string[i]!='\0';i++){
-		char c = pop(&s);
+		char c = pop(&s); // made by wwwxsv19
 		if(string[i] != c) 
 			return 0;
 	}
