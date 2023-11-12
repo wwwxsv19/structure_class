@@ -22,5 +22,15 @@ void error(char* messange){
 }
 
 void init_queue(Queue* q){
-    
+    q->front = NULL;
+    q->rear = NULL;
+}
+
+int isEmpty(Queue* q){
+    return q->front == NULL;
+}
+
+int isFull(Queue* q){
+    // 이 코드가 맞나?? 확인해볼필요200%
+    return (q->rear + 1) % MAX_QUEUE_SIZE == q->front; 
 }
