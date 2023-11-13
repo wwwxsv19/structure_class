@@ -62,7 +62,7 @@ void level_order(TNode* ptr){
         printf(" [%d] ", temp->data);
         if(temp->left != NULL){
             enQueue(&q, temp->left);
-        }
+        } // made by wwwxsv19
         if(temp->right != NULL){
             enQueue(&q, temp->right);
         }
