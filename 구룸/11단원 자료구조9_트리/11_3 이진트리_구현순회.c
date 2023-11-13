@@ -21,16 +21,36 @@ void error(char* messange){
     exit(1);
 }
 
-void init_queue(Queue* q){
-    q->front = NULL;
-    q->rear = NULL;
+void initQueue(Queue* q){
+    q->front = -1;
+    q->rear = -1;
 }
 
 int isEmpty(Queue* q){
-    return q->front == NULL;
+    return q->rear == MAX_QUEUE_SIZE - 1;
 }
 
 int isFull(Queue* q){
     // 이 코드가 맞나?? 확인해볼필요200%
-    return (q->rear + 1) % MAX_QUEUE_SIZE == q->front; 
+    return q->rear == q->front; 
+}
+
+void enQueue(Queue* q, element data){
+    if(isFull(q)){
+        error("Queue is overflow!\n");
+        return ;
+    }
+    q->data[++q->rear] = data;
+}
+
+element dequeue(Queue* q){
+    /**/
+}
+
+void level_order(TNode* ptr){
+    Queue q;
+    initQueue(&q);
+
+    if(ptr == NULL) return;
+    enQueue(q, ptr->data);
 }
