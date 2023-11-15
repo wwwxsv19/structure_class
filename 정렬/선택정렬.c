@@ -1,12 +1,13 @@
 #include <stdio.h>
 int main(){
 	int list[] = {5, 3, 8, 1, 2, 7};
-	int index, min, n=sizeof(list)/sizeof(int), num;
+	int index, min, num;
+	int n = sizeof(list) / sizeof(int);
 	
 	for(int i=0; i<n-1; i++){ 
 		min = i;
 		for(int j=i+1; j<n; j++){
-			if(list[j]<list[min]) min = j;
+			if(list[j] < list[min]) min = j;
 		}
 		num = list[i];
 		list[i] = list[min];
