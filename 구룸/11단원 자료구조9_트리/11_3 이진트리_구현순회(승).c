@@ -22,8 +22,8 @@ void error(char* message){
 }
 
 void initQueue(Queue* q){
-    q->front = -1;
-    q->rear = -1;
+    q->front = 0;
+    q->rear = 0;
 }
 
 int isEmpty(Queue* q){
@@ -31,7 +31,7 @@ int isEmpty(Queue* q){
 }
 
 int isFull(Queue* q){
-    return q->rear == MAX_QUEUE_SIZE - 1;
+    return (q->rear + 1) % MAX_QUEUE_SIZE == q->front;
 }
 
 void enQueue(Queue* q, element data){
@@ -39,7 +39,8 @@ void enQueue(Queue* q, element data){
         error("Queue is overflow!\n");
         return ;
     }
-    q->data[++q->rear] = data;
+    q->rear = (q->rear + 1) % MAX_QUEUE_SIZE;
+    q->data[q->rear] = data;
 }
 
 element deQueue(Queue* q){
@@ -47,7 +48,8 @@ element deQueue(Queue* q){
         error("Queue is underflow!\n");
         exit(1);
     }
-    return q->data[++q->front];
+    q->front = (q->front + 1) % MAX_QUEUE_SIZE;
+    return q->data[q->front];
 }
 
 void level_order(TNode* ptr){
