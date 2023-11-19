@@ -23,9 +23,9 @@ void insert(Node* pre, element data){
 Node* deleteFirst(Node* head){ // made by wwwxsv19
 	if (head == NULL) return NULL;
 	Node* removed = head;
-    Node* newhead = head->next;
+    Node* newHead = head->next;
     free(removed);
-    return newhead;
+    return newHead;
 }
 void delete(Node* pre){
 	Node* removed = pre->next; 
@@ -33,7 +33,7 @@ void delete(Node* pre){
 	free(removed);
 }
 void printList(Node* head){
-	while(head!=NULL){
+	while(head != NULL){
 		printf("%d->", head->data); // made by wwwxsv19
 		head = head->next;
 	}
@@ -46,7 +46,7 @@ int main(){
 	
 	printf("[첫 위치 삽입]\n");
 	
-	for(int i = 0;i<5;i++){
+	for(int i=0; i<5; i++){
 		head = insertFirst(head, i);
 		printList(head);
 		if(i == 2) temp = head; //데이터가 2인 노드 주소 저장
