@@ -7,64 +7,35 @@ typedef struct TNode{
 	element data;
 	struct TNode* left;
 	struct TNode* right;
-} TNode;
+} TNode; // made by wwwxsv19
 
 TNode* search(TNode* root, int data){
     if(root == NULL) return NULL;
-
     if(data == root->data) return root;
-    else if(data < root->data) return search(root->left, data);
-    else return search(root->right, data);
+    else{
+        TNode* temp = search(root->left, data);
+        if(temp != NULL) return temp;
+        return search(root->right, data);
+    }
 }
 
-TNode* makeNewNode(char rv, char lf, char rt){
+TNode* makeNewNode(char data){
     TNode* newNode = (TNode*)malloc(sizeof(TNode));
-    newNode->data = item;
+    newNode->data = data;
     newNode->left = newNode->right = NULL;
     return newNode; // made by wwwxsv19
 }
 
-TNode* insertNode(TNode* root, char rvdata, char lfdata, char rtdata){
-    if(root == NULL) return root = makeNewNode(rvdata, lfdata, rtdata);
-    
-    else if(data > root->data) root->right = insertNode(root->right, data);
-    return root;
-}
+void insertNode(TNode* root, char data, char lf, char rt){
+    root->data = data;
 
-TNode* minNode(TNode* root){
-    TNode* minNode = root;
-    while(minNode->left != NULL){
-        minNode = minNode->left;
-    }
-    return minNode;
-}
-
-TNode* deleteNode(TNode* root, int data){ // made by wwwxsv19
-    if(root == NULL) return root;
-
-    if(data < root->data) root->left = deleteNode(root->left, data);
-    else if(data > root->data) root->right = deleteNode(root->right, data);
-    else if(data == root->data){
-        if(root->left == NULL){
-            TNode* Node = root->right;
-            free(root);
-            return Node;
-        }
-        if(root->right == NULL){
-            TNode* Node = root->left;
-            free(root);
-            return Node;
-        }
-        TNode* newRoot = minNode(root->right);
-        root->data = newRoot->data;
-        root->right = deleteNode(root->right, newRoot->data);
-    }
-    return root;
+    if(lf != '.') root->left = makeNewNode(lf);
+    if(rt != '.') root->right = makeNewNode(rt);
 }
 
 void preorder(TNode* root){
     if(root == NULL) return ;
-    printf("[%d] ", root->data);
+    printf("%c", root->data);
 	preorder(root->left);
 	preorder(root->right);
 }
@@ -73,7 +44,7 @@ void inorder(TNode* root){
     if(root == NULL) return ;
     inorder(root->left);
     printf("%c", root->data);
-    inorder(root->right);
+    inorder(root->right); // made by wwwxsv19
 }
 
 void postorder(TNode* root){
@@ -84,19 +55,25 @@ void postorder(TNode* root){
 }
 
 int main(){
-	TNode* root = NULL;
+	TNode* root = makeNewNode(NULL);
+    TNode* temp;
 
 	int n;
 	scanf("%d", &n);
 	getchar();
 	
-	char rv, lf, rt;
+	char data, lf, rt;
 	for(int i=0; i<n; i++){
-		scanf("%c %c %c", &rv, &lf, &rt);
-		root = insertNode(root, rv);
+		scanf("%c %c %c", &data, &lf, &rt);
+        getchar();
+		temp = search(root, data);
+        if(temp != NULL) insertNode(temp, data, lf, rt);
+        else insertNode(root, data, lf, rt);
 	}
 	
-	inorder(root);
+    preorder(root); printf("\n");
+	inorder(root); printf("\n");
+    postorder(root);
 	
 	return 0;
-}
+} // made by wwwxsv19
