@@ -28,7 +28,6 @@ TNode* makeNewNode(char data){
 
 void insertNode(TNode* root, char data, char lf, char rt){
     root->data = data;
-
     if(lf != '.') root->left = makeNewNode(lf);
     if(rt != '.') root->right = makeNewNode(rt);
 }
