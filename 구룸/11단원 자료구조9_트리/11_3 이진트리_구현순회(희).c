@@ -16,7 +16,7 @@ TNode* makeRootNode(int data, TNode* left, TNode* right){
     return root;
 }
 
-void preorder(TNode* root){
+void preorder(TNode* root){ // 전위 순회
     TNode* x = root;
     if(x ==  NULL) return ;
     printf("[%d] ", x->data);
@@ -24,7 +24,7 @@ void preorder(TNode* root){
     preorder(x->right);
 }
 
-void inorder(TNode* root){
+void inorder(TNode* root){ // 중위 순회
     TNode* x = root;
     if(x ==  NULL) return ;
     inorder(x->left);
@@ -32,7 +32,7 @@ void inorder(TNode* root){
     inorder(x->right);
 }
 
-void postorder(TNode* root){
+void postorder(TNode* root){ // 후위 순회
     TNode* x = root;
     if(x ==  NULL) return ;
     postorder(x->left);
