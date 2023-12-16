@@ -1,50 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_Q_SIZE 5
+#define MAX 5
 
 typedef int element;
 
-typedef struct{
-	int front;
-	int rear;
-	element data[MAX_Q_SIZE];
+typedef struct Queue{
+	int front, rear;
+	element data[MAX];
 } Queue;
 
-void error(char* message){
-	printf("%s\n", message);
-	exit(0); // 메인함수 종료
+void error(char* msg){
+	printf("%s\n", msg);
+	exit(0); // main 종료
 }
 
 void initQueue(Queue* q){
 	q->front = q->rear = -1;
 }
-int isFull(Queue* q){
-	return q->rear == MAX_Q_SIZE-1;
-}
 int isEmpty(Queue* q){
 	return q->rear == q->front;
 }
+int isFull(Queue* q){
+	return q->rear == MAX - 1;
+}
 
 void enQueue(Queue* q, element item){
-	if(isFull(q)){
-		error("Queue is full\n");
-	}
+	if(isFull(q)) 
+		error("Queue Overflow!");
 	q->data[++q->rear] = item;
 }
 
 element deQueue(Queue* q){ // made by wwwxsv19
-	int temp;
-	if(isEmpty(q)){
-		error("Queue is empty\n");
-	}
+	if(isEmpty(q)) 
+		error("Queue Underflow!");
 	return q->data[++q->front];
 }
-	
-void queuePrint(Queue* q){
-	int i;
-	for(i=0; i<MAX_Q_SIZE; i++){
-		if (i <= q->front || i > q->rear){
+
+void printQueue(Queue* q){
+	for(int i=0; i<MAX; i++){
+		if(i <= q->front || i > q->rear){
 			printf(" | ");
 		}
 		else{
@@ -60,17 +55,17 @@ int main() {
 	
 	initQueue(&q); // made by wwwxsv19
 	
-	enQueue(&q, 10); queuePrint(&q);
-	enQueue(&q, 20); queuePrint(&q);
-	enQueue(&q, 30); queuePrint(&q);
-	enQueue(&q, 40); queuePrint(&q);
-	enQueue(&q, 50); queuePrint(&q);
-	enQueue(&q, 60); queuePrint(&q);
+	enQueue(&q, 10); printQueue(&q);
+	enQueue(&q, 20); printQueue(&q);
+	enQueue(&q, 30); printQueue(&q);
+	enQueue(&q, 40); printQueue(&q);
+	enQueue(&q, 50); printQueue(&q);
+	enQueue(&q, 60); printQueue(&q);
 	
-	printf("꺼낸 값 : %d\n", deQueue(&q)); queuePrint(&q);
-	printf("꺼낸 값 : %d\n", deQueue(&q)); queuePrint(&q);
-	printf("꺼낸 값 : %d\n", deQueue(&q)); queuePrint(&q);
-	printf("꺼낸 값 : %d\n", deQueue(&q)); queuePrint(&q);
+	printf("꺼낸 값 : %d\n", deQueue(&q)); printQueue(&q);
+	printf("꺼낸 값 : %d\n", deQueue(&q)); printQueue(&q);
+	printf("꺼낸 값 : %d\n", deQueue(&q)); printQueue(&q);
+	printf("꺼낸 값 : %d\n", deQueue(&q)); printQueue(&q);
 	
 	return 0;
 }

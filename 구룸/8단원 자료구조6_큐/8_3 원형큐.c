@@ -1,69 +1,66 @@
 #include<stdlib.h>
 #include <stdio.h>
 
-#define MAX_Q_SIZE 5
+#define MAX 5
 
 typedef int element;
 
-typedef struct{
-	int rear;
-	int front;
-	element data[MAX_Q_SIZE];
+typedef struct Queue{
+	int front, rear;
+	element data[MAX];
 } Queue;
 
 void initQueue(Queue* q){
-	q->front = 0;
-	q->rear = 0;	
+	q->front = q->rear = 0;	
 }
 int isEmpty(Queue* q){
 	return q->front == q->rear;
 } // made by wwwxsv19
 int isFull(Queue* q){
-	return (q->rear + 1) % MAX_Q_SIZE == q->front;
+	return (q->rear + 1) % MAX == q->front;
 }
 
 void enQueue(Queue* q, element item){
 	if(isFull(q)){
-		printf("큐가 포화상태입니다.\n");
+		printf("Overflow!\n");
 		return ;
 	}
-	q->rear = (q->rear + 1) % MAX_Q_SIZE;
+	q->rear = (q->rear + 1) % MAX;
 	q->data[q->rear] = item;
 }
 
 element deQueue(Queue* q){
 	if(isEmpty(q)){
-		printf("큐는 공백상태입니다.\n");
+		printf("Underflow!\n");
 		return 0;
 	} // made by wwwxsv19
-	q->front = (q->front + 1) % MAX_Q_SIZE;
+	q->front = (q->front + 1) % MAX;
 	return q->data[q->front];
 }
 
 element peekQueue(Queue* q){
-	int temp;
 	if(isEmpty(q)){
-		printf("큐는 공백상태입니다.\n");
+		printf("Underflow!\n");
 		return 0;
 	}
-	return q->data[(q->front + 1) % MAX_Q_SIZE];
+	return q->data[(q->front + 1) % MAX];
 }
 
 void printQueue(Queue* q){
-	int i;
 	printf("QUEUE(front=%d rear=%d) = ", q->front, q->rear);
 	
 	if(isEmpty(q)){
-		printf("큐는 공백상태입니다.\n"); // made by wwwxsv19
-		return;
+		printf("Underflow!\n"); // made by wwwxsv19
+		return ;
 	}
 	
-	i = q->front;
+	int i = q->front;
 	
 	do{
-		i = (i+1) % (MAX_Q_SIZE);
+		i = (i+1) % (MAX);
 		printf("%d | ", q->data[i]);
-		if(i == q->rear) break;
+		if(i == q->rear) 
+			break;
 	} while(i!=q->front);
 	
 	printf("\n");
@@ -77,7 +74,7 @@ int main() {
 	
 	printf("--데이터 추가 단계--\n");
 	
-	while (!isFull(&q)){
+	while(!isFull(&q)){
 		printf("정수를 입력하시오.");
 		scanf("%d", &item);
 		enQueue(&q, item);
