@@ -23,7 +23,7 @@ void push(Node* top, element data){
 	top->next = node;
 }
 
-void pop(Node* top){
+element pop(Node* top){
 	element data;
 	Node* temp;
 
@@ -33,8 +33,10 @@ void pop(Node* top){
 	} // made by wwwxsv19
 	else{
 		temp = top->next;
+		data = temp->data;
 		top->next = temp->next;
 		free(temp);
+		return data;
 	}
 }
 
