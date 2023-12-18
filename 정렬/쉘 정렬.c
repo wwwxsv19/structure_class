@@ -1,3 +1,8 @@
+/*
+쉘 정렬 : 간격별 부분 리스트를 만들어 그 리스트를 삽입 정렬 후, 
+정렬된 부분 리스트를 합쳐 다시 정렬 ( 간격을 줄여나가면서 )
+*/ 
+
 #include <stdio.h>
 
 insertSort(int list[], int first, int last, int gap){

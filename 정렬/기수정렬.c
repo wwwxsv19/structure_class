@@ -1,3 +1,5 @@
+// 기수 정렬 : 정렬이라기보단 분류
+
 #include <stdio.h>
 #include <stdlib.h>
 

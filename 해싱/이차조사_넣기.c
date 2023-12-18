@@ -1,46 +1,33 @@
 #include <stdio.h>
 
-int n = 8;
+int k, n = 8;
 
 int hash(int key){
-    return key%n;
+    return key % n;
 }
 
-int f(int list[], int key){
-    int index = hash(key);
-    int t = index, k = 0;
+int main(){
+    int key, list[8] = {0, 0, 10, 3, 2, 5, 0, 0};
+    scanf("%d", &key);
+    
+	int index = hash(key);
 
     while(1){
         if(list[index] == 0){
             list[index] = key;
-            return index;
+            break;
         }
         else{
             k++;
-            index = (hash(key) + (k*k))%n;  // +1 을 하며 배열의 빈칸을 찾아 넣는다!
-            if(t==index){
-                return -1;
-            }
+            index = (hash(key) + (k*k)) % n
         }
     }
-}
 
-int main(){
-    int key, list[8] = {0, 0, 10, 3, 0, 5, 0, 0};
-    scanf("%d", &key);
-
-	int index = f(list, key);
-
-    if(index == -1){
-        printf("overflow\n");
-    }
-    else{
-        printf("%d\n", index);
-        
-        for(int i=0; i<n; i++){
+	printf("%d\n", index);
+		
+    for(int i=0; i<8; i++){
             printf("%d ", list[i]);
-        }
-    }
+	}
 
 	return 0;
 }

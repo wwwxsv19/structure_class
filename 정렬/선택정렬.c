@@ -1,3 +1,5 @@
+// 선택 정렬 : 최솟값을 찾아 바꾼다
+
 #include <stdio.h>
 int main(){
 	int list[] = {5, 3, 8, 1, 2, 7};
